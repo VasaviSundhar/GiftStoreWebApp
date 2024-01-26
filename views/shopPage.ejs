@@ -1,0 +1,112 @@
+<%- include('shared/header.ejs') -%>
+
+<form class="my-form" name="myForm" method="post" action="/shop">
+  <fieldset class="P_Info">
+    <legend>Personal Information</legend>
+    <!--A separate fieldset for personal information-->
+    <br />
+    <div class="name_div">
+     <label for="name">Name:</label>
+     <input type="text" name="name">
+    </div>
+    
+    <div class="phone_div">
+     <label for="phone">Phone:</label>
+     <input type="text" name="phone" placeholder="xxxxxxxxxx">
+    </div>
+    
+    <div class="email_div">
+     <label for="email">Email ID:</label>
+     <input type="text" name="email" placeholder="text@text.com">
+    </div>
+    
+    <div class="address_div">
+     <label for="address">Address: </label>
+     <input type="text" name="address">
+    </div>
+
+    <div class="city_div">
+     <label for="city">City:</label>
+     <input type="text" name="city">
+    </div>
+    
+
+    <div class="province_div">
+     <label for="province">Province:  </label>
+     <select name="province" >
+      <option value="">select one</option>
+      <option value="Alberta">Alberta</option>
+      <option value="British Columbia">British Columbia</option>
+      <option value="Manitoba">Manitoba</option>
+      <option value="New Brunswik">New Brunswik</option>
+      <option value="Newfoundland & Labrador">Newfoundland & Labrador</option>
+      <option value="Northwest Territories">Northwest Territories</option>
+      <option value="Nova Scotia">Nova Scotia</option>
+      <option value="Nunavut">Nunavut</option>
+      <option value="Ontario">Ontario</option>
+      <option value="Prince Edward Island">Prince Edward Island</option>
+      <option value="Quebec">Quebec</option>
+      <option value="Saskatchewan">Saskatchewan</option>
+      <option value="Yukon">Yukon</option>
+     </select>
+    </div>
+    </fieldset>
+    <br />
+
+    <fieldset class="products">
+      <legend>Products</legend>
+      <div class="product_div">
+       <label for="rose_quantity">
+         <img src="/images/Golden_Rose.jpg">
+         <p>Golden Rose</p>
+         <p>Price:$6</p>
+       </label>
+       <input class="rose_quantity" name="rose_quantity" type="number">
+      </div>
+
+      <div class="product_div">
+        <label for="doll_quantity">
+          <img src="/images/red_doll.jpg">
+          <p>Red Doll</p>
+          <p>Price:$3</p>
+        </label>
+        <input class="doll_quantity" name="doll_quantity" type="number">
+       </div>
+
+       <div class="product_div">
+        <label for="stand_quantity">
+          <img src="/images/Pen_Stand.jpg">
+          <p>Pen Stand</p>
+          <p>Price:$10</p>
+        </label>
+        <input class="stand_quantity" name="stand_quantity" type="number">
+       </div>
+
+       <div class="product_div">
+        <label for="clock_quantity">
+          <img src="/images/Sand_Clock.jpg">
+          <p>Sand Clock</p>
+          <p>Price:$8</p>
+        </label>
+        <input class="clock_quantity" name="clock_quantity" type="number">
+       </div>
+
+    </fieldset>
+
+    <div class="button_div">
+      <button type="submit">Check Out</button>
+    </div>
+  </form>
+
+  <!-- error container for displaying error messages -->
+  <div class="error-container">
+    <% if(typeof errors !== 'undefined') {
+      for(let error of errors) {
+        %>
+          <p><%= error.msg %> </p>
+        <%
+      }
+    } %>
+  </div>
+
+<%- include('shared/footer.ejs') -%>

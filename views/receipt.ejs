@@ -1,0 +1,42 @@
+<%- include('shared/header.ejs') -%>
+<main>
+    <section>
+        <h1 class="receipt">Receipt</h1>
+        <h3>Customer Details</h3>
+        <!-- displaying customer details -->
+      <p><span>Name </span>: <%= name %></p>
+      <p><span>Email </span>: <%= email %></p>
+      <p><span>Phone Number</span>: <%= phone %></p>
+      <p><span>Address </span>: <%= address %></p>
+      <p><span>City </span>: <%= city %></p>
+      <p><span>Province </span>: <%= province %></p>
+      
+        <table class="table1">
+          <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Amount</th>
+          </tr>
+         <!-- for each selected product, one row is added with the corresponding data -->
+          <% product_table.forEach(function(each_product) { %>
+            <tr>
+                <td><%= each_product.name %></td>
+                <td><%= each_product.quantity %></td>
+                <td><%= each_product.price %></td>
+                <td><%= each_product.amount %></td>
+            </tr>
+        
+          <% }); %>
+        </table>
+        <table class="table2">
+            <tr><td>Total price</td><td><%= total_purchase %></td></tr>
+            <tr><td>Tax</td><td><%= tax %>%</td></tr>
+            <tr><td>Tax Amount</td><td><%= tax_amount %></td></tr>
+            <tr><td>Total price with tax</td><td><%= total_with_tax %></td></tr>
+        </table>
+    </section>
+  </main>
+
+
+<%- include('shared/footer.ejs') -%>

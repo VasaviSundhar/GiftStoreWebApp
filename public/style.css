@@ -1,0 +1,180 @@
+header {
+    position: sticky; /*The header remains on the top when scrolled down*/
+    top: 0;
+    z-index: 1; /*when scrolled, the contents of the page do not overlap on the header*/
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 64px;
+    color: white;
+    background-color: brown; /*background color of header*/
+}
+.main{
+    position:relative;
+}
+.home{
+width:100%;
+}
+.text{
+    position:absolute;
+    top:100px;
+    left:30px;
+    width:50%;
+    text-align: center;
+}
+h4{
+    font-size: 80px;
+    font-family:sans-serif;
+    margin: 100px auto 30px;
+}
+
+a{
+    display:block;
+    margin:50px auto;
+    text-decoration: none;
+    background-color: rgb(238, 146, 60);
+    color:black;
+    padding:5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 40px;
+    width: 30%;
+    text-align: center;
+   
+}
+
+a:hover{
+    scale: 1.15;
+}
+
+.my-form {
+    width: 70%;
+    padding: 20px;
+    margin: 10px 10px;
+    /* border: 2px solid black; */
+    box-shadow:0 0 20px #9aa7b6;
+    border-radius: 5px;
+    
+}
+
+.P_Info {
+    display: flex;
+    flex-direction: column;
+    gap:0.5em;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:0.5em;
+}
+
+
+.product_div input{
+    width:70%;
+    align-self: center;
+}
+
+.P_Info label {
+    width: 25%;
+    display: inline-block;
+}
+
+.product_div{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.product_div p{
+    margin:0;
+}
+
+img{
+    border-radius: 5px;
+}
+
+.product_div img{
+    width:100%;
+}
+.button_div{
+    text-align: center;
+}
+button {
+  background-color: green;
+  width: 150px;
+  border: 2px;
+  color: white;
+  margin: 20px auto 0px;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 8px;
+}
+
+button:hover{
+    scale: 1.25;
+}
+::placeholder {
+    color: #9aa7b6;
+}
+
+.error-container {
+
+  background-color: pink;
+  color: rgb(109, 27, 27);
+  width: 25%;
+  top: 25%;
+  right: 0;
+  z-index: 2;
+  position: fixed;
+  float: right;
+  border-radius: 10px;
+  padding-left: 10px;
+  box-shadow:0 0 20px #9aa7b6;
+}
+    
+
+.receipt{
+    font-size: 30px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+section{
+    width: 50%;
+    margin: 20px auto;
+    padding: 15px;
+    box-shadow:0 0 20px #9aa7b6;
+    background-color: rgb(255, 255, 255);
+}
+
+h3{
+    background-color: black;
+    color:white;
+    padding:2px 5px;
+}
+
+p{
+    font-weight: bold;
+    margin-left: 5px;
+}
+span{
+    width:25%;
+    display:inline-block;
+}
+th, td{
+    border:2px solid black;
+    width: 25%;
+    text-align: center;
+}
+
+.table1{
+    width:100%;
+    border: 2px double black;
+}
+
+.table2{
+    width:50%;
+    border: 2px double black;
+    margin: 0 0 0 50%;
+}
+
